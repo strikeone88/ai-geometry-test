@@ -16,9 +16,9 @@ Y = np.zeros(shape=(3), dtype='float64')
 
 # Inicia con 128x128x3
 model = Sequential([
-	Convolution2D(8, (5,5), activation='relu'),     # 124x124x8
-	MaxPooling2D((4, 4)),                           # 28x28x8
-	Flatten(),                                      # 6,272
+	Convolution2D(32, (5,5), activation='relu'),    # 124x124x32
+	MaxPooling2D((4, 4)),                           # 28x28x32
+	Flatten(),                                      # 25,088
 	Dense(256, activation='relu'),                  # 256
 	Dense(Y.shape[-1])                              # 3
 ])
